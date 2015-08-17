@@ -239,7 +239,7 @@
         }
         document.addEventListener(vAPI.sessionId, function(e) {
             if(shouldBlockDetailedRequest(e.detail)) {
-                document.body.setAttribute("blocked", "true");
+                e.detail.url = false;
             }
         }, true);
         var tmpJS = document.createElement("script");
